@@ -1,0 +1,58 @@
+#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+print("Welcome to Calorie Counting Challenge.")
+print("Your mission is to plan a day's meals (breakfast, lunch, and dinner) that total as close to 1500 calories as possible without exceeding it.") 
+#Background: You are provided with two meal options for each of breakfast, lunch, and dinner. 
+#Each meal has its calorie count. You need to choose one meal for each time of the day. 
+#Your goal is to sum up these meals to reach as close to 1500 calories as possible without going over.
+
+#Write your code below this line 👇
+
+print("Choose your breakfast")
+
+breakfast = input("What breakfast option do you want 'Oatmeal' or 'Pancakes'\n").lower()
+# assigning default value in case to some unexpected input value
+breakfast_calories = 0
+lunch_calories = 0
+dinner_calories = 0 
+                    #BREAKFAST
+if breakfast == "oatmeal":
+    breakfast1 = 300
+elif breakfast == "pancakes":
+    breakfast1 = 500
+else:
+    print("Please choose only the options in the menu")
+    # I know that there is a loop that I can use, but I want to continue as a beginner in this code
+          #So if the input is different from the options we stop running and restart
+
+                    #LUNCH
+lunch = input("What lunch option do you want 'Salad' or 'Pizza'\n").lower()
+if lunch == "salad":
+          lunch1 = 400
+elif lunch == "pizza":
+    lunch1 = 600
+else:
+    print("Please choose only the options in the menu")
+          
+                    #DINNER
+dinner = input("What dinner option do you want 'Chicken and Rice' or 'Pasta'\n").lower()
+if dinner == "chicken and rice":
+          dinner1 = 450
+elif dinner == "pasta":
+    dinner1 = 550
+else:
+    print("Please choose only the options in the menu")
+
+
+#OUTCOME
+#If the total is exactly 1500 calories, print: You ate your exactly calorie target intake.
+#If the total is less than 1500 calories, indicate how many calories they are under.
+#If the total exceeds 1500 calories, print a message that they've gone over the limit.
+
+condition = breakfast1 + lunch1 + dinner1
+
+if condition == 1500:
+          print ("You ate your exactly calorie target intake")
+elif condition < 1500:
+          print("Well done, you ate less than your caloric target. If you contine eating like this over time, you'll lose body fat")
+else:
+          print("You ate above your caloric target. If you continue eating more caloires than you bur you'll gain excess of body fat which is bad for your health")
